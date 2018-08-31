@@ -16,8 +16,14 @@
 ## TODO
 
 [x] Dev stuff
+
 [x] Optimization stuff
+
 [ ] Accessiblity stuff
+
 [ ] Responsive stuff
+
 [ ] Indexing stuff
+
 [ ] Testing stuff
+
