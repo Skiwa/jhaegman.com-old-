@@ -15,15 +15,15 @@
 
 ## TODO
 
-[x] Dev stuff
+- [x] Dev stuff
 
-[x] Optimization stuff
+- [x] Optimization stuff
 
-[ ] Accessiblity stuff
+- [ ] Accessiblity stuff
 
-[ ] Responsive stuff
+- [ ] Responsive stuff
 
-[ ] Indexing stuff
+- [ ] Indexing stuff
 
-[ ] Testing stuff
+- [ ] Testing stuff
 
