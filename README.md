@@ -1,6 +1,6 @@
-# Jhaegman.com
+# jhaegman.com
 
-Personal website, full-page angular app with GSAP animations.
+[Personal website](https://www.jhaegman.com), full-page angular app with GSAP animations.
 
 `ng serve` to run it in dev mode
 `ng build` to build it
