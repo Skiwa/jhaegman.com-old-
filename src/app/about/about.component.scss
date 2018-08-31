@@ -1,0 +1,43 @@
+$primary : #636e73;
+#about{
+  #aboutPart {
+    height: 25vh;
+    background: $primary;
+    width: 100%;
+    display: table;
+    div{
+      padding: 0vh 20%;
+      display:table-cell;
+      vertical-align: middle;
+    }
+    h1,p {
+      color: white;
+      text-align: center;
+    }
+    h1{
+      font-family: "Futura", sans-serif;
+      font-weight: 300;
+      font-size: 1.8em;
+      text-transform: uppercase;
+    }
+    p{
+      font-family: "Source Sans Pro", sans-serif;
+      font-size: 1.5em;
+      a{
+        color: white;
+        font-weight: bolder;
+      }
+    }
+  }
+}
+
+// 1024*768
+@media screen and (max-height: 768px), screen and (max-width: 1024px){
+  #aboutPart {
+    p{
+      font-size: 1.2em !important;
+    }
+  }
+}
+
+

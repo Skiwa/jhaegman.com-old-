@@ -1,0 +1,119 @@
+$primary : #e17055;
+$secondary : #f9b1a0;
+$light : #f4d4d0;
+
+
+#showcase{
+  position: relative;
+  height: 100vh;
+  background: $light;
+  .in{
+    height: 100%;
+    width: 100%;
+    display : grid;
+    grid-template-columns: 5vw 3fr 2.5fr 5vw;
+    div{
+      align-self: center;
+    }
+    .showcaseDescription{
+      padding: 0 5% 0 20%;
+      a {
+        color: $primary;
+        h2 {
+          font-family: "Source Sans Pro", sans-serif;
+          font-size: 1.75em;
+          display: inherit;
+        }
+      }
+      p {
+        font-family: "Source Sans Pro", sans-serif;
+        font-size: 1.4em;
+      }
+    }
+    .showcasePreview{
+      position: relative;
+      height: 50vh;
+      svg{
+        position: absolute;
+        height: 100%;
+        fill: $primary;
+      }
+      a{
+        img{
+          display: none;
+          position: absolute;
+          height: 100%;
+          clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+        }
+      }
+
+    }
+    .previousBlock, .nextBlock{
+      svg{
+        height: 10vh;
+        margin: 3vh;
+        cursor: pointer;
+        fill: $secondary;
+        transition: all .2s;
+        &:hover {
+          fill: $primary;
+        }
+      }
+    }
+    .previousBlock{
+      svg{
+        float: left;
+      }
+    }
+    .nextBlock{
+      svg{
+        float: right;
+      }
+    }
+    .browse{
+      grid-column: span 4;
+      justify-self: center;
+      display: flex;
+      svg{
+        height: 3.5vh;
+        margin: 0 2%;
+        cursor: pointer;
+        &:hover > .browseIconcls-1{
+          fill: $primary;
+        }
+        .browseIconcls-1{
+          transition: all .1s;
+        }
+      }
+    }
+  }
+
+  .showcaseFooter{
+    position: absolute;
+    bottom: 0;
+
+    #showcaseFooterMainPoly{
+      z-index: 10;
+      fill: $primary;
+      position: absolute;
+      bottom: 0;
+      width: 30vw;
+      left: calc((100vw - 30vw) / 2 );
+      margin: auto;
+      polygon{
+        fill: $primary;
+      }
+      path{
+        fill: white;
+        opacity: 0.9;
+      }
+    }
+    #showcaseFooterOutsidePoly{
+      z-index: 0;
+      fill: $secondary;
+      width: 100vw;
+      position: absolute;
+      bottom: 0;
+    }
+  }
+}

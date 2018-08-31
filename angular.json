@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "PW": {
+    "JHaegman.com": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/PW",
+            "outputPath": "dist/JHaegman.com",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -54,18 +54,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "PW:build"
+            "browserTarget": "JHaegman.com:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "PW:build:production"
+              "browserTarget": "JHaegman.com:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "PW:build"
+            "browserTarget": "JHaegman.com:build"
           }
         },
         "test": {
@@ -99,7 +99,7 @@
         }
       }
     },
-    "PW-e2e": {
+    "JHaegman.com-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "architect": {
@@ -107,7 +107,7 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "PW:serve"
+            "devServerTarget": "JHaegman.com:serve"
           }
         },
         "lint": {
@@ -122,5 +122,5 @@
       }
     }
   },
-  "defaultProject": "PW"
+  "defaultProject": "JHaegman.com"
 }

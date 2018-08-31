@@ -1,0 +1,115 @@
+$primary : #2d3436;
+#footer{
+  height: 75vh;
+  background: $primary;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  .leftColumn,.rightColumn{
+    position: relative;
+    span{
+      color: rgba(255,255,255,0.3);
+      position: absolute;
+      bottom: 0;
+      font-family: "Source Sans Pro", sans-serif;
+      font-weight: 500;
+      font-size: 1.25em;
+      margin: 10px 20px;
+    }
+  }
+  .leftColumn{
+    text-align: left;
+    span{
+      left: 0;
+    }
+  }
+  .rightColumn{
+    text-align: right;
+    span{
+      right: 0;
+    }
+  }
+  .formColumn{
+    .formPoly{
+      display: none;
+      fill: white;
+      height: 15vh;
+      text-align: center;
+      margin: 5vh auto 10vh auto;
+    }
+    form{
+      h1{
+        color: white;
+        font-size: 2em;
+        font-weight: bold;
+        margin: 2.5vh 0;
+        text-align: center;
+        font-family: "Futura", sans-serif;
+        text-transform: uppercase;
+      }
+      input, textarea{
+        padding: 3px 25px;
+        display:block;
+        margin: 0 auto 3vh auto;
+        font-family: "Source Sans Pro", sans-serif;
+        font-weight: 700;
+        color: rgba(0,0,0,0.8);
+        border-radius: 3px;
+        border-color: transparent;
+      }
+      input, textarea{
+        width: 80%;
+        font-size: 1.3em;
+      }
+      input{
+        height: 5vh;
+      }
+      textarea{
+        height: 25vh;
+        padding: 25px 25px;
+        outline: none;
+        resize: none;
+      }
+      button{
+        display:block;
+        margin: auto;
+        background: transparent;
+        outline: none;
+        text-align: center;
+        text-decoration: none;
+        font-weight: 500;
+        font-family: "Source Sans Pro", sans-serif;
+        vertical-align: middle;
+        border: 1px solid;
+        transition: all 0.2s ease;
+        box-sizing: border-box;
+        text-shadow: 0 1px 0 rgba(0,0,0,0.01);
+        font-size: 1.2em;
+        padding: 0.5625em 1.5em;
+        color: white;
+        border-color: white;
+        cursor: pointer;
+        &:hover{
+          background: white;
+          color: $primary;
+          border-color: white;
+        }
+      }
+    }
+  }
+}
+
+// 1024*768
+@media screen and (max-width: 1024px), screen and(max-height: 768px){
+  input{
+    font-size: 0.9em !important;
+    padding: 2px 12px !important;
+    height: 5vh !important;
+  }
+  textarea{
+    font-size: 0.9em !important;
+    padding: 2px 12px !important;
+    height: 20vh !important;
+  }
+}
