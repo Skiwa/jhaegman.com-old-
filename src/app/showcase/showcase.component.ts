@@ -44,7 +44,7 @@ export class ShowcaseComponent implements OnInit, OnDestroy {
       // Key event listener
       this.keyEventStorage = this.keyUpHandler.bind(this);
       document.addEventListener('keyup', this.keyEventStorage);
-    }, 500);
+    }, 750);
 
     // key listener
     document.addEventListener('keyup', (event) => {

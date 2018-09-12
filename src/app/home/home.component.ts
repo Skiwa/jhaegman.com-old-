@@ -27,7 +27,7 @@ export class HomeComponent implements OnInit {
       // Key event listener
       this.keyEventStorage = this.keyUpHandler.bind(this);
       document.addEventListener('keyup', this.keyEventStorage);
-    }, 500);
+    }, 750);
 
 
   }
