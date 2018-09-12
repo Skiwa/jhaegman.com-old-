@@ -11,7 +11,7 @@ import {Router} from '@angular/router';
 export class HomeComponent implements OnInit {
   revealed;
   scrolled = false;
-
+  keyEventStorage;
   constructor(private router: Router) {}
 
   ngOnInit() {
@@ -23,7 +23,13 @@ export class HomeComponent implements OnInit {
       document.getElementById('home').addEventListener('wheel', (e) => {
         this.scrollEvent(e);
       });
-    }, 1000);
+
+      // Key event listener
+      this.keyEventStorage = this.keyUpHandler.bind(this);
+      document.addEventListener('keyup', this.keyEventStorage);
+    }, 500);
+
+
   }
 
   appearAll() {
@@ -77,6 +83,16 @@ export class HomeComponent implements OnInit {
     }
   }
 
+  navigateUp() {
+    document.removeEventListener('keyup', this.keyEventStorage);
+    this.router.navigate(['skillsAscending']);
+  }
+
+  navigateDown() {
+    document.removeEventListener('keyup', this.keyEventStorage);
+    this.router.navigate(['portfolio']);
+  }
+
   scrollEvent(e) {
     if (!this.scrolled) {
       this.scrolled = true;
@@ -85,6 +101,15 @@ export class HomeComponent implements OnInit {
       } else {
         this.router.navigate(['portfolio']);
       }
+    }
+  }
+
+  // What do after keyup
+  keyUpHandler(event) {
+    if (event.keyCode === 40) {
+      this.navigateDown();
+    } else if (event.keyCode === 38) {
+      this.navigateUp();
     }
   }
 }

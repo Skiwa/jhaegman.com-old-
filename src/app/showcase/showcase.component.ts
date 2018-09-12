@@ -13,7 +13,7 @@ export class ShowcaseComponent implements OnInit, OnDestroy {
   scrolled = false;
   rotation = true;
   interval;
-
+  keyEventStorage;
   constructor(private router: Router) {
     this.current = new Portfolio();
 
@@ -40,7 +40,11 @@ export class ShowcaseComponent implements OnInit, OnDestroy {
       document.getElementById('showcase').addEventListener('wheel', (e) => {
         this.scrollEvent(e);
       });
-    }, 1000);
+
+      // Key event listener
+      this.keyEventStorage = this.keyUpHandler.bind(this);
+      document.addEventListener('keyup', this.keyEventStorage);
+    }, 500);
 
     // key listener
     document.addEventListener('keyup', (event) => {
@@ -60,12 +64,14 @@ export class ShowcaseComponent implements OnInit, OnDestroy {
   scrollEvent(e) {
     if (!this.scrolled) {
       if (e.deltaY < 0 ) {
-        this.router.navigate(['skills']);
+        this.navigateUp();
       } else {
-        this.router.navigate(['about']);
+        this.navigateDown();
       }
     }
   }
+
+
 
   // show banner
   appearAll() {
@@ -144,4 +150,24 @@ export class ShowcaseComponent implements OnInit, OnDestroy {
       document.getElementById('img' + this.current.short).style.display = 'inherit';
       TweenMax.fromTo('.showcasePreview #img' + this.current.short, .5, {opacity: 0}, {opacity: 1, ease: Power2.easeOut}, '');
   }
+
+  // What do after keyup
+  keyUpHandler(event) {
+    if (event.keyCode === 40) {
+      this.navigateDown();
+    } else if (event.keyCode === 38) {
+      this.navigateUp();
+    }
+  }
+
+  navigateUp() {
+    document.removeEventListener('keyup', this.keyEventStorage);
+    this.router.navigate(['skills']);
+  }
+
+  navigateDown() {
+    document.removeEventListener('keyup', this.keyEventStorage);
+    this.router.navigate(['about']);
+  }
+
 }

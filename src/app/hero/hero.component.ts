@@ -10,7 +10,7 @@ import {Router} from '@angular/router';
 
 export class HeroComponent implements OnInit {
   scrolled = false;
-
+  keyEventStorage;
   constructor(private router: Router) {}
 
   ngOnInit() {
@@ -32,14 +32,12 @@ export class HeroComponent implements OnInit {
     });
 
     // Key event listener
-    document.addEventListener('keyup', (event) => {
-      if (event.keyCode === 40) {
-        this.transfoCTA();
-      }
-    });
+    this.keyEventStorage = this.keyUpHandler.bind(this);
+    document.addEventListener('keyup', this.keyEventStorage);
   }
 
   transfoCTA() {
+    document.removeEventListener('keyup', this.keyEventStorage);
     const length = document.getElementById('ctaSpan').offsetWidth;
     const height = window.innerHeight;
     const tl2 = new TimelineMax();
@@ -56,7 +54,7 @@ export class HeroComponent implements OnInit {
     // change route after all animations
     setTimeout(() => {
       this.changeRoute();
-    }, 1000);
+      }, 1000);
   }
 
   changeRoute() {
@@ -78,6 +76,13 @@ export class HeroComponent implements OnInit {
         this.scrolled = true;
         this.transfoCTA();
       }
+    }
+  }
+
+  // What do after keyup
+  keyUpHandler(event) {
+    if (event.keyCode === 40) {
+      this.transfoCTA();
     }
   }
 }

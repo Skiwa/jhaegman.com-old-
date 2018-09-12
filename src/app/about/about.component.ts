@@ -9,6 +9,7 @@ import {Router} from '@angular/router';
 export class AboutComponent implements OnInit {
 
   scrolled = false;
+  keyEventStorage;
 
   constructor(private route: Router) {}
 
@@ -19,14 +20,25 @@ export class AboutComponent implements OnInit {
     document.getElementById('aboutPart').addEventListener('wheel', (e) => {
       this.scrollEvent(e);
     });
+
+    // Key event listener
+    this.keyEventStorage = this.navigateUp.bind(this);
+    document.addEventListener('keyup', this.keyEventStorage);
   }
 
   scrollEvent(e) {
     if (!this.scrolled) {
       if (e.deltaY < 0 ) {
         this.scrolled = true;
-        this.route.navigate(['portfolio']);
+        this.navigateUp();
       }
     }
   }
+
+  navigateUp() {
+    document.removeEventListener('keyup', this.keyEventStorage);
+    this.route.navigate(['portfolio']);
+  }
+
+
 }
