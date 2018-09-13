@@ -233,6 +233,28 @@ $dark: #033325;
       }
     }
   }
+  .navigation{
+    position: fixed;
+    bottom: 9%;
+    width: 2.5%;
+    right: 2%;
+    opacity: 0;
+    a{
+      #navigateUp{
+        margin-bottom: 40%;
+      }
+      #navigateUp, #navigateDown{
+        cursor: pointer;
+        transition: all .25s;
+        path{
+          fill: #057f62;
+        }
+        &:hover{
+          transform: scale(1.2);
+        }
+      }
+    }
+  }
 }
 
 // 1366 * 768

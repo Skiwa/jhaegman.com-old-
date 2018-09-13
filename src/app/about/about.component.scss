@@ -29,6 +29,28 @@ $primary : #636e73;
       }
     }
   }
+  .navigationFooter{
+    position: fixed;
+    top: 5%;
+    width: 2.5%;
+    right: 2%;
+    opacity: 0;
+    a{
+      #navigateUp{
+        margin-bottom: 40%;
+      }
+      #navigateUp, #navigateDown{
+        cursor: pointer;
+        transition: all .25s;
+        path{
+          fill: rgba(255,255,255, 1);
+        }
+        &:hover{
+          transform: scale(1.2);
+        }
+      }
+    }
+  }
 }
 
 // 1024*768

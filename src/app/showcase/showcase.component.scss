@@ -1,7 +1,7 @@
 $primary : #e17055;
 $secondary : #f9b1a0;
 $light : #f4d4d0;
-
+$dark : #72392c;
 
 #showcase{
   position: relative;
@@ -114,6 +114,28 @@ $light : #f4d4d0;
       width: 100vw;
       position: absolute;
       bottom: 0;
+    }
+  }
+  .navigation{
+    position: fixed;
+    bottom: 9%;
+    width: 2.5%;
+    right: 2%;
+    opacity: 0;
+    a{
+      #navigateUp{
+        margin-bottom: 40%;
+      }
+      #navigateUp, #navigateDown{
+        cursor: pointer;
+        transition: all .25s;
+        path{
+          fill: $primary;
+        }
+        &:hover{
+          transform: scale(1.2);
+        }
+      }
     }
   }
 }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
+import { TweenMax} from 'gsap/tweenmax';
 
 @Component({
   selector: 'app-about',
@@ -24,6 +25,10 @@ export class AboutComponent implements OnInit {
     // Key event listener
     this.keyEventStorage = this.navigateUp.bind(this);
     document.addEventListener('keyup', this.keyEventStorage);
+
+
+    // navigation
+    TweenMax.to(' .navigationFooter', 1, {opacity: 1});
   }
 
   scrollEvent(e) {
@@ -36,6 +41,7 @@ export class AboutComponent implements OnInit {
   }
 
   navigateUp() {
+    TweenMax.to(' .navigationFooter', 1, {opacity: 0});
     document.removeEventListener('keyup', this.keyEventStorage);
     this.route.navigate(['portfolio']);
   }

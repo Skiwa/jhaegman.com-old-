@@ -71,7 +71,9 @@ export class ShowcaseComponent implements OnInit, OnDestroy {
     }
   }
 
-
+  hideNavigation() {
+    TweenMax.to(' .navigation', .5, {opacity: 0});
+  }
 
   // show banner
   appearAll() {
@@ -80,6 +82,9 @@ export class ShowcaseComponent implements OnInit, OnDestroy {
     tl.fromTo('#showcaseFooterMainPoly', .5, {scaleX: 0}, {scaleX: 1}, 'start+=0.25');
     tl.fromTo('#showcaseFooterMainPoly path', .5, {opacity: 0}, {opacity: 0.9}, 'start+=0.75');
     tl.fromTo('#showcaseFooterOutsidePoly', .75, {scaleX: 0}, {scaleX: 1}, 'start+=0.5');
+
+    // navigation
+    tl.to(' .navigation', 1, {opacity: 1}, 'start+=.5');
   }
 
 
@@ -161,11 +166,13 @@ export class ShowcaseComponent implements OnInit, OnDestroy {
   }
 
   navigateUp() {
+    this.hideNavigation();
     document.removeEventListener('keyup', this.keyEventStorage);
     this.router.navigate(['skills']);
   }
 
   navigateDown() {
+    this.hideNavigation();
     document.removeEventListener('keyup', this.keyEventStorage);
     this.router.navigate(['about']);
   }

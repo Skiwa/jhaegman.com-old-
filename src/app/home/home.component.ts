@@ -61,6 +61,9 @@ export class HomeComponent implements OnInit {
     tl2.from(' .presentation .avatar', .5, {xPercent: -200}, 'start+=1.25');
     tl2.from(' .polySocialCenter', .25, {margin: 0}, 'start+=1.75');
     tl2.from(' .presentation p, .presentation h1', .5, {xPercent: -200}, 'start+=1.25');
+
+    // navigation
+    tl2.to(' .navigation', 1, {opacity: 1}, 'start+=.5');
   }
 
   reveal(bloc) {
@@ -84,13 +87,20 @@ export class HomeComponent implements OnInit {
   }
 
   navigateUp() {
+    this.hideNavigation();
     document.removeEventListener('keyup', this.keyEventStorage);
     this.router.navigate(['skillsAscending']);
   }
 
   navigateDown() {
+    this.hideNavigation();
     document.removeEventListener('keyup', this.keyEventStorage);
     this.router.navigate(['portfolio']);
+
+  }
+
+  hideNavigation() {
+    TweenMax.to(' .navigation', .5, {opacity: 0});
   }
 
   scrollEvent(e) {
