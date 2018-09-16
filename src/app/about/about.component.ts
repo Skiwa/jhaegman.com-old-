@@ -40,5 +40,9 @@ export class AboutComponent implements OnInit {
     this.route.navigate(['portfolio']);
   }
 
+  navigateTop() {
+    this.route.navigate(['']);
+  }
+
 
 }

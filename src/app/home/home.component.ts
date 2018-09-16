@@ -57,10 +57,10 @@ export class HomeComponent implements OnInit {
     tl2.to('.node', .5, {scaleX: 1}, '-=0.25');
 
     tl2.add('side');
-    tl2.from(' .social', .5, {xPercent: -75}, 'start+=1.25');
-    tl2.from(' .presentation .avatar', .5, {xPercent: -200}, 'start+=1.25');
+    tl2.from(' .social', .5, {xPercent: -125}, 'start+=1.25');
+    tl2.from(' .presentation .avatar', .5, {xPercent: -250}, 'start+=1.25');
     tl2.from(' .polySocialCenter', .25, {margin: 0}, 'start+=1.75');
-    tl2.from(' .presentation p, .presentation h1', .5, {xPercent: -200}, 'start+=1.25');
+    tl2.from(' .presentation p, .presentation h1', .5, {xPercent: -250}, 'start+=1.25');
 
     // navigation
     tl2.to(' .navigation', 1, {opacity: 1}, 'start+=.5');

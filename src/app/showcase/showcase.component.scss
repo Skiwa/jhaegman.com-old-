@@ -11,9 +11,14 @@ $dark : #72392c;
     height: 100%;
     width: 100%;
     display : grid;
-    grid-template-columns: 5vw 3fr 2.5fr 5vw;
+    grid-template-columns: 5vw 5.5fr 5vw;
     div{
       align-self: center;
+    }
+    .showcaseContent{
+      display: grid;
+      grid-template-columns: 1.4fr 1.2fr;
+      grid-gap: 5%;
     }
     .showcaseDescription{
       padding: 0 5% 0 20%;
@@ -33,6 +38,7 @@ $dark : #72392c;
     .showcasePreview{
       position: relative;
       height: 50vh;
+      float: right;
       svg{
         position: absolute;
         height: 100%;
@@ -61,11 +67,13 @@ $dark : #72392c;
       }
     }
     .previousBlock{
+      z-index: 500;
       svg{
         float: left;
       }
     }
     .nextBlock{
+      z-index: 500;
       svg{
         float: right;
       }
@@ -137,5 +145,63 @@ $dark : #72392c;
         }
       }
     }
+  }
+}
+
+
+@media screen and (max-width: 768px) and (orientation: portrait){
+  .showcaseContent{
+    grid-template-columns: none !important;
+    grid-template-rows: 1fr 1fr;
+    .showcaseDescription{
+      grid-row: 2;
+      padding: 0 10% !important;
+      text-align: center !important;
+      margin-top: -25% !important;
+      font-size: 0.8em;
+    }
+    .showcasePreview{
+      grid-row: 1;
+      img, svg{
+        display: block;
+        text-align: center;
+        margin:auto;
+      }
+      img{
+        right: 0;
+        left: 0;
+        height: 80% !important;
+        top: 20%;
+      }
+      svg{
+        display: none;
+      }
+    }
+  }
+
+  #showcaseFooterMainPoly{
+    display: none;
+  }
+
+  #showcaseFooterOutsidePoly{
+    display: none;
+  }
+
+  .browse{
+    display: none !important;
+  }
+
+  #navigateDown{
+    position: fixed;
+    bottom: 2%;
+    width: 10%;
+    left: 45%
+  }
+
+  #navigateUp{
+    position: fixed;
+    top: 2%;
+    width: 10%;
+    left: 45%
   }
 }

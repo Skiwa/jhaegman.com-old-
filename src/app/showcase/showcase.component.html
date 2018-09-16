@@ -5,22 +5,24 @@
         <polygon points="3.5 61.9 52.23 120.3 52.23 3.5 3.5 61.9"/>
       </svg>
     </div>
-    <div class="showcaseDescription">
-      <a href="{{current.link}}" title="Vers {{current.name}}" target="_blank" rel="noopener">
-        <h2>{{current.name}}</h2>
-      </a>
-      <p>{{current.description}}</p>
-      <a href="{{current.link}}"></a>
-    </div>
-    <div class="showcasePreview">
-      <a href="{{current.link}}" target="_blank" rel="noopener" title="{{current.name}}">
-        <img id='imgJhaegman' src="assets/img/jhaegman-crop.jpg" alt="Aperçu du site JHaegman.com">
-        <img id='imgNevada' src="assets/img/nevada-crop.jpg" alt="Aperçu du site Nevada 2087">
-        <img id='imgTokyo' src="assets/img/tokyo-crop.jpg" alt="Aperçu du site Tokyo Agency">
-        <svg viewBox="0 0 424 489.59">
-          <path d="M212,17.32,409,131.06V358.53L212,472.27,15,358.53V131.06L212,17.32M212,0,0,122.4V367.19l212,122.4,212-122.4V122.4L212,0Z"/>
-        </svg>
-      </a>
+    <div class="showcaseContent">
+      <div class="showcaseDescription">
+        <a href="{{current.link}}" title="Vers {{current.name}}" target="_blank" rel="noopener">
+          <h2>{{current.name}}</h2>
+        </a>
+        <p>{{current.description}}</p>
+        <a href="{{current.link}}"></a>
+      </div>
+      <div class="showcasePreview">
+        <a href="{{current.link}}" target="_blank" rel="noopener" title="{{current.name}}">
+          <img id='imgJhaegman' src="assets/img/jhaegman-crop.jpg" alt="Aperçu du site JHaegman.com">
+          <img id='imgNevada' src="assets/img/nevada-crop.jpg" alt="Aperçu du site Nevada 2087">
+          <img id='imgTokyo' src="assets/img/tokyo-crop.jpg" alt="Aperçu du site Tokyo Agency">
+          <svg viewBox="0 0 424 489.59">
+            <path d="M212,17.32,409,131.06V358.53L212,472.27,15,358.53V131.06L212,17.32M212,0,0,122.4V367.19l212,122.4,212-122.4V122.4L212,0Z"/>
+          </svg>
+        </a>
+      </div>
     </div>
     <div class="nextBlock">
       <svg (click)='next(false);' id="Layer_1" viewBox="0 0 55.73 123.8">

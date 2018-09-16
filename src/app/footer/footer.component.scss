@@ -114,3 +114,40 @@ $primary : #2d3436;
     height: 20vh !important;
   }
 }
+
+
+@media screen and (max-width: 768px) and (orientation: portrait){
+  #footer{
+    grid-template-columns: none;
+    grid-template-rows: 5fr 1fr;
+    height: 70vh;
+    max-height: 75vh;
+
+  }
+  .formColumn{
+    h1{
+      font-size: 1.1em !important;
+    }
+    button{
+      padding: 5px 10px !important;
+    }
+  }
+
+  .leftColumn{
+    grid-row: 2;
+    position: relative;
+    span{
+      width: 100%;
+      display: block;
+      text-align: center;
+      font-size: 1em !important;
+      margin: 10px 0 !important;
+      position: absolute;
+      top: 0;
+    }
+  }
+
+  .rightColumn{
+    display: none;
+  }
+}

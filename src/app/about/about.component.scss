@@ -6,7 +6,7 @@ $primary : #636e73;
     width: 100%;
     display: table;
     div{
-      padding: 0vh 20%;
+      padding: 0 20%;
       display:table-cell;
       vertical-align: middle;
     }
@@ -38,7 +38,7 @@ $primary : #636e73;
       #navigateUp{
         margin-bottom: 40%;
       }
-      #navigateUp, #navigateDown{
+      #navigateUp{
         cursor: pointer;
         transition: all .25s;
         path{
@@ -58,6 +58,26 @@ $primary : #636e73;
     p{
       font-size: 1.2em !important;
     }
+  }
+}
+
+@media screen and (max-width: 768px) and (orientation: portrait){
+  #aboutPart {
+    div{
+      padding: 0 5% !important;
+    }
+    h1{
+      font-size: 1.1em !important;
+    }
+    p {
+      font-size: 0.9em !important;
+    }
+  }
+
+  #navigateUp{
+    width: 10%;
+    position: fixed;
+    right: 5%;
   }
 }
 
