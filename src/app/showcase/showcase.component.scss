@@ -39,10 +39,11 @@ $dark : #72392c;
       position: relative;
       height: 50vh;
       float: right;
-      svg{
+      #showcasePreviewPoly{
         position: absolute;
         height: 100%;
         fill: $primary;
+        transition: all 1s;
       }
       a{
         img{

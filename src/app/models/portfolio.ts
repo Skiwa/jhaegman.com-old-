@@ -7,6 +7,7 @@ export class Portfolio {
   link;
   image;
   max = 4;
+  color;
 
   constructor() {
     this.id = 1;
@@ -22,27 +23,31 @@ export class Portfolio {
         this.description = 'Page principale de ce site. Application full-page en Angular conçue avec la librairie GSAP.';
         this.link = 'https://www.jhaegman.com/';
         this.image = '';
+        this.color = '#086699';
         break;
-      case 2:
+      case 3:
         this.short = 'Tokyo';
         this.name = 'Tokyo Agency';
         this.description = 'Application Angular concernant une agence immobillière fictive à Tokyo.\n Expérimentation des effets parallaxes.';
         this.link = 'https://www.jhaegman.com/tokyo-agency';
         this.image = '';
+        this.color = '#FAA91A';
         break;
-      case 3:
+      case 4:
         this.short = 'Nevada';
         this.name = 'Nevada 2087';
         this.description = 'Court-métrage d\'animation au format numérique, réalisé en collaboration avec des étudiants en animation aux Ateliers de Sèvres, à Paris.';
         this.link = 'https://www.jhaegman.com/nevada-2087/';
         this.image = '';
+        this.color = '#68a084';
         break;
-      case 4:
+      case 2:
         this.short = 'FerretDesign';
         this.name = 'FerretDesign';
-        this.description = 'Application Angular et Materialize.css. Site concernant un studio de design fictif.';
+        this.description = 'Application Angular et Materialize.css. Studio de design fictif.';
         this.link = 'https://www.jhaegman.com/ferret-design/';
         this.image = '';
+        this.color = '#EB4B4D';
         break;
 
 

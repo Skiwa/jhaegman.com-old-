@@ -34,6 +34,7 @@ export class ShowcaseComponent implements OnInit, OnDestroy {
 
     // show first img
     document.getElementById('img' + this.current.short).style.display = 'inherit';
+    document.getElementById('showcasePreviewPoly').style.fill = this.current.color;
 
     // event listener
     setTimeout(() => {
@@ -93,6 +94,7 @@ export class ShowcaseComponent implements OnInit, OnDestroy {
     this.imageFadeOut();
     this.fade();
     this.current.previous();
+    document.getElementById('showcasePreviewPoly').style.fill = this.current.color;
     window.setTimeout(() => {
       this.imageFadeIn();
     }, 200);
@@ -106,6 +108,7 @@ export class ShowcaseComponent implements OnInit, OnDestroy {
     this.imageFadeOut();
     this.fade();
     this.current.next();
+    document.getElementById('showcasePreviewPoly').style.fill = this.current.color;
     window.setTimeout(() => {
       this.imageFadeIn();
     }, 200);
@@ -117,6 +120,7 @@ export class ShowcaseComponent implements OnInit, OnDestroy {
       this.imageFadeOut();
       this.fade();
       this.current.goto(id);
+      document.getElementById('showcasePreviewPoly').style.fill = this.current.color;
       window.setTimeout(() => {
         this.imageFadeIn();
       }, 200);
