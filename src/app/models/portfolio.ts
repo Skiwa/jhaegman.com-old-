@@ -6,7 +6,7 @@ export class Portfolio {
   description;
   link;
   image;
-  max = 3;
+  max = 4;
 
   constructor() {
     this.id = 1;
@@ -37,6 +37,15 @@ export class Portfolio {
         this.link = 'https://www.jhaegman.com/nevada-2087/';
         this.image = '';
         break;
+      case 4:
+        this.short = 'FerretDesign';
+        this.name = 'FerretDesign';
+        this.description = 'Application Angular et Materialize.css. Site concernant un studio de design fictif.';
+        this.link = 'https://www.jhaegman.com/ferret-design/';
+        this.image = '';
+        break;
+
+
     }
   }
 
