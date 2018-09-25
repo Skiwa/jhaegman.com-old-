@@ -157,7 +157,7 @@ $dark: #033325;
         .css{ width: 100%;}
         .js{width: 80%;}
         .ui{width: 70%;}
-        .ux{width: 60%;}
+        .ux{width: 70%;}
       }
       div:nth-child(even) {
         border-left: solid $dark 3px;
@@ -258,6 +258,13 @@ $dark: #033325;
   }
 }
 
+// < 1700
+@media screen and (max-width: 1700px){
+  .subskillInfo{
+    display: none;
+  }
+}
+
 // 1366 * 768
 @media screen and (max-width: 1366px), screen and(max-height: 768px){
   .presentation{
@@ -281,6 +288,10 @@ $dark: #033325;
         height: 3vh !important;
       }
     }
+  }
+
+  .subskillInfo{
+    display: none;
   }
 
   #home .skills .front-end div:nth-child(2n+1) .subskill span,  #home .skills .back-end div:nth-child(2n+1) .subskill span{

@@ -42,17 +42,27 @@
     <h2 class="side-title">compétences front-end</h2>
     <div class="front-end">
       <div>
-        <span>HTML5</span>
+        <span (click)="reveal('html')" class="link">HTML5</span>
+        <div id="subskillhtml" class="subskill">
+          <span>Joomla (CMS)</span>
+          <span>WordPress (CMS)</span>
+          <span>XHTML</span>
+          <span>XML</span>
+        </div>
+
       </div>
+
       <div>
         <span class="html"></span>
       </div>
       <div>
         <span (click)="reveal('css')" class="link">CSS3</span>
         <div id="subskillcss" class="subskill">
-          <span>Less (Préprocesseur)</span>
-          <span>Sass (Préprocesseur)</span>
-          <span>Materialize.css</span>
+          <span>Less <strong class="subskillInfo">(Préprocesseur)</strong></span>
+          <span>Sass <strong class="subskillInfo">(Préprocesseur)</strong></span>
+          <span>Bootstrap <strong class="subskillInfo">(Framework)</strong></span>
+          <span>Foundation <strong class="subskillInfo">(Framework)</strong></span>
+          <span>Materialize <strong class="subskillInfo">(Framework)</strong></span>
           <span>Responsive design</span>
         </div>
       </div>
@@ -62,10 +72,12 @@
       <div>
         <span (click)="reveal('js')" class="link">JavaScript</span>
         <div id="subskilljs" class="subskill">
-          <span>Angular (Framework)</span>
-          <span>Bootstrap (Framework)</span>
-          <span>JQuery (Framework)</span>
-          <span> AJAX / JSON</span>
+          <span>Angular 6 <strong class="subskillInfo">(Framework)</strong></span>
+          <span>JQuery <strong class="subskillInfo">(Framework)</strong></span>
+          <span>AJAX</span>
+          <span>JSON</span>
+          <span>ES6</span>
+          <span>TypeScript</span>
         </div>
       </div>
       <div>
@@ -89,7 +101,7 @@
       <div>
         <span (click)="reveal('php')" class="link">PHP</span>
         <div id="subskillphp" class="subskill">
-          <span>Zend (Framework)</span>
+          <span>Zend <strong class="subskillInfo">(Framework)</strong></span>
         </div>
       </div>
       <div>
